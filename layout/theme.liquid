@@ -10,6 +10,7 @@
   {{ content_for_header }} <!-- Header hook for plugins -->
   {{ 'application.scss.css' | asset_url | stylesheet_tag }}
   {{ 'application.js' | asset_url | script_tag }}
+  {{ 'addtocart.js' | asset_url | script_tag }} {% comment %} mochi javascript {% endcomment %}
 </head>
 <body>
 
@@ -38,7 +39,7 @@
   {% endif %}
 
   <main role="main">
-    {{ content_for_layout }}
+    {{ content_for_layout }} {% comment %} templates are called from here {% endcomment %}
   </main>
 </body>
 </html>
